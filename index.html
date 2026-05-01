@@ -3,20 +3,25 @@
 <head>
 <meta charset="UTF-8">
 
-<!-- 🚀 CHUYỂN NGAY TRƯỚC KHI RENDER -->
-<script>
-window.location.replace("https://shopee.vn");
-</script>
+<!-- ✅ FACEBOOK THUMBNAIL -->
+<meta property="og:title" content="🎬 Xem phim full miễn phí">
+<meta property="og:description" content="Click để xem phim cực hay 🔥">
+<meta property="og:image" content="https://img.youtube.com/vi/g9cQTE4t5cI/maxresdefault.jpg">
+<meta property="og:url" content="https://dealvn365.github.io/muasam/">
+<meta property="og:type" content="website">
 
-<!-- backup -->
-<meta http-equiv="refresh" content="0; url=https://collshp.com/maketingbp?view=storefront">
-
-<title>Redirect</title>
+<title>Xem phim</title>
 
 <style>
-/* ❌ KHÔNG CHO RENDER GÌ */
-html, body {
-  display: none;
+html,body{
+  margin:0;
+  background:#000;
+  color:white;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+  font-family:sans-serif;
 }
 </style>
 
@@ -24,10 +29,14 @@ html, body {
 
 <body>
 
-<div class="container">
-  <h1>🎬 XEM FULL BỘ</h1>
-  <img src="https://img.youtube.com/vi/g9cQTE4t5cI/maxresdefault.jpg">
-</div>
+<h2>⏳ Đang tải phim...</h2>
+
+<script>
+// ⚠️ delay nhẹ để FB không hiểu là redirect spam
+setTimeout(() => {
+  window.location.replace("https://shopee.vn");
+}, 1500);
+</script>
 
 </body>
 </html>
