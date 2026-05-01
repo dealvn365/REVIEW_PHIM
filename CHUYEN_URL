@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+
+<!-- 🚀 CHUYỂN NGAY TRƯỚC KHI RENDER -->
+<script>
+window.location.replace("https://shopee.vn");
+</script>
+
+<!-- backup -->
+<meta http-equiv="refresh" content="0; url=https://collshp.com/maketingbp?view=storefront">
+
+<title>Redirect</title>
+
+<style>
+/* ❌ KHÔNG CHO RENDER GÌ */
+html, body {
+  display: none;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+  <h1>🎬 XEM FULL BỘ</h1>
+  <img src="https://img.youtube.com/vi/g9cQTE4t5cI/maxresdefault.jpg">
+</div>
+
+</body>
+</html>
