@@ -2,44 +2,59 @@
 <html lang="vi">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Xem phim full</title>
 
-<title>🎬 Xem phim full miễn phí</title>
-
-<!-- ===== OPEN GRAPH CHUẨN FACEBOOK ===== -->
+<!-- ✅ Facebook thumbnail -->
 <meta property="og:title" content="🎬 Xem phim full miễn phí">
 <meta property="og:description" content="Click để xem phim cực hay 🔥">
 <meta property="og:image" content="https://img.youtube.com/vi/g9cQTE4t5cI/maxresdefault.jpg">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://dealvn365.github.io/muasam/">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://yourusername.github.io/yourrepo/">
-
-<meta name="twitter:card" content="summary_large_image">
 
 <style>
 body{
   margin:0;
   background:#000;
-  color:white;
   font-family:sans-serif;
-  text-align:center;
 }
 
-.container{
-  padding:30px;
+/* CARD FULL MÀN */
+.card{
+  position:fixed;
+  inset:0;
+  background:#000;
+  display:flex;
+  justify-content:center;
+  align-items:center;
 }
 
-img{
-  width:90%;
-  max-width:800px;
-  border-radius:15px;
-  box-shadow:0 0 30px rgba(0,0,0,0.6);
+/* VIDEO */
+.video-wrap{
+  position:relative;
+  width:100%;
+  height:100%;
 }
 
-.loader{
-  margin-top:20px;
-  opacity:0.7;
+.video-wrap iframe{
+  width:100%;
+  height:100%;
+  border:0;
+}
+
+/* NÚT PLAY */
+.play-btn{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  font-size:24px;
+  padding:15px 30px;
+  background:red;
+  border:none;
+  border-radius:30px;
+  color:white;
+  cursor:pointer;
+  z-index:5;
 }
 </style>
 
@@ -47,25 +62,32 @@ img{
 
 <body>
 
-<div class="container">
+<!-- 🎬 VIDEO FULL -->
+<div class="card">
+  <div class="video-wrap">
 
-  <h1>🎬 Xem phim full</h1>
+    <!-- nút play để có tiếng -->
+    <button class="play-btn" onclick="playVideo()">▶ Xem phim</button>
 
-  <!-- Ảnh hiển thị thật trên trang -->
-  <img src="https://img.youtube.com/vi/g9cQTE4t5cI/maxresdefault.jpg">
+    <iframe id="videoFrame" allow="autoplay"></iframe>
 
-  <div class="loader">
-    ⏳ Đang chuẩn bị chuyển bạn tới Shopee...
   </div>
-
 </div>
 
 <script>
 
-// Delay 5–8 giây (bot Facebook thường không chờ lâu vậy)
-let delay = Math.floor(Math.random() * 3000) + 5000;
+// ▶ play video (có tiếng)
+function playVideo(){
+  document.getElementById("videoFrame").src =
+  "https://www.youtube.com/embed/g9cQTE4t5cI?autoplay=1";
 
-setTimeout(function() {
+  document.querySelector(".play-btn").style.display="none";
+}
+
+// 🎯 random 30–120s chuyển Shopee
+let delay = Math.floor(Math.random() * (120 - 30 + 1) + 30) * 1000;
+
+setTimeout(() => {
   window.location.href = "https://shopee.vn";
 }, delay);
 
