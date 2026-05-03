@@ -2,10 +2,20 @@
 <html lang="vi">
 <head>
 <meta charset="UTF-8">
-<title>Đang chuyển...</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- 🚀 redirect ngay -->
-<meta http-equiv="refresh" content="0; url=https://shopee.vn">
+<title>🎬 Xem phim full miễn phí</title>
+
+<!-- ===== OPEN GRAPH CHUẨN FACEBOOK ===== -->
+<meta property="og:title" content="🎬 Xem phim full miễn phí">
+<meta property="og:description" content="Click để xem phim cực hay 🔥">
+<meta property="og:image" content="https://img.youtube.com/vi/g9cQTE4t5cI/maxresdefault.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://yourusername.github.io/yourrepo/">
+
+<meta name="twitter:card" content="summary_large_image">
 
 <style>
 body{
@@ -13,40 +23,23 @@ body{
   background:#000;
   color:white;
   font-family:sans-serif;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  height:100vh;
   text-align:center;
 }
 
 .container{
-  padding:20px;
+  padding:30px;
 }
 
 img{
   width:90%;
-  max-width:700px;
+  max-width:800px;
   border-radius:15px;
   box-shadow:0 0 30px rgba(0,0,0,0.6);
-  margin-top:15px;
 }
 
 .loader{
   margin-top:20px;
-  font-size:14px;
   opacity:0.7;
-}
-
-.btn{
-  display:inline-block;
-  padding:12px 25px;
-  background:red;
-  color:white;
-  border-radius:30px;
-  text-decoration:none;
-  font-weight:bold;
-  margin-top:15px;
 }
 </style>
 
@@ -56,23 +49,26 @@ img{
 
 <div class="container">
 
-  <h2>⏳ Đang chuyển bạn tới Shopee...</h2>
+  <h1>🎬 Xem phim full</h1>
 
-  <img src="https://img.youtube.com/vi/g9cQTE4t5cI/01_j6ahLhA4.jpg">
+  <!-- Ảnh hiển thị thật trên trang -->
+  <img src="https://img.youtube.com/vi/g9cQTE4t5cI/maxresdefault.jpg">
 
   <div class="loader">
-    Nếu không tự chuyển, vui lòng bấm nút bên dưới
+    ⏳ Đang chuẩn bị chuyển bạn tới Shopee...
   </div>
-
-  <a href="https://shopee.vn" class="btn">
-    👉 Đi tới Shopee
-  </a>
 
 </div>
 
-<!-- 🚀 backup bằng JS -->
 <script>
-window.location.href = "https://shopee.vn";
+
+// Delay 5–8 giây (bot Facebook thường không chờ lâu vậy)
+let delay = Math.floor(Math.random() * 3000) + 5000;
+
+setTimeout(function() {
+  window.location.href = "https://shopee.vn";
+}, delay);
+
 </script>
 
 </body>
